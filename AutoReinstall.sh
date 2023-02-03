@@ -212,11 +212,12 @@ function Start() {
   echo "  6) Ubuntu 16.04"
   echo "  7) Ubuntu 18.04"
   echo "  8) Ubuntu 20.04"
-  echo "  9) Custom image"
+  echo "  9) Ubuntu 22.04"
+  echo "  10) Custom image"
   echo -e "\033[31m  Deprecated:\033[0m"
-  echo "  10) CentOS 6"
-  echo "  11) Debian 9"
-  echo "  12) Ubuntu 14.04"
+  echo "  11) CentOS 6"
+  echo "  12) Debian 9"
+  echo "  13) Ubuntu 14.04"
   echo "  0) Exit"
   echo -ne "\nYour option: "
   read N
@@ -229,7 +230,8 @@ function Start() {
     6) echo -e "\nPassword: Pwd@Linux\n"; read -s -n1 -p "Press any key to continue..." ; bash /tmp/InstallNET.sh -u 16.04 -v 64 -a $NETSTR $UMIRROR ;;
     7) echo -e "\nPassword: Pwd@Linux\n"; read -s -n1 -p "Press any key to continue..." ; bash /tmp/InstallNET.sh -u 18.04 -v 64 -a $NETSTR $UMIRROR ;;
     8) echo -e "\nPassword: Pwd@Linux\n"; read -s -n1 -p "Press any key to continue..." ; bash /tmp/InstallNET.sh -u 20.04 -v 64 -a $NETSTR $UMIRROR ;;
-    9)
+    9) echo -e "\nPassword: Pwd@Linux\n"; read -s -n1 -p "Press any key to continue..." ; bash /tmp/InstallNET.sh -u 20.04 -v 64 -a $NETSTR $UMIRROR ;;
+    10)
       echo -e "\n"
       read -r -p "Custom image URL: " imgURL
       echo -e "\n"
@@ -239,9 +241,9 @@ function Start() {
         *) clear; echo "Canceled by user!"; exit 1;;
       esac
       ;;
-    10) echo -e "\nPassword: Pwd@Linux\n"; read -s -n1 -p "Press any key to continue..." ; bash /tmp/InstallNET.sh -c 6.10 -v 64 -a $NETSTR $CMIRROR ;;
-    11) echo -e "\nPassword: Pwd@Linux\n"; read -s -n1 -p "Press any key to continue..." ; bash /tmp/InstallNET.sh -d 9 -v 64 -a $NETSTR $DMIRROR ;;
-    12) echo -e "\nPassword: Pwd@Linux\n"; read -s -n1 -p "Press any key to continue..." ; bash /tmp/InstallNET.sh -u 14.04 -v 64 -a $NETSTR $UMIRROR ;;
+    11) echo -e "\nPassword: Pwd@Linux\n"; read -s -n1 -p "Press any key to continue..." ; bash /tmp/InstallNET.sh -c 6.10 -v 64 -a $NETSTR $CMIRROR ;;
+    12) echo -e "\nPassword: Pwd@Linux\n"; read -s -n1 -p "Press any key to continue..." ; bash /tmp/InstallNET.sh -d 9 -v 64 -a $NETSTR $DMIRROR ;;
+    13) echo -e "\nPassword: Pwd@Linux\n"; read -s -n1 -p "Press any key to continue..." ; bash /tmp/InstallNET.sh -u 14.04 -v 64 -a $NETSTR $UMIRROR ;;
     0) exit 0;;
     *) echo "Wrong input!"; exit 1;;
   esac
